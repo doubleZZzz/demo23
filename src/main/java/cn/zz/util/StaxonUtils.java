@@ -123,9 +123,9 @@ public class StaxonUtils {
 
 
     /**
-     * @Description: 去掉转换xml之后的换行和空格
-     * @author watermelon_code
-     * @date 2017年8月9日 下午4:05:44
+     * 去掉转换xml之后的换行和空格
+     * @param json
+     * @return
      */
     public static String json2xmlReplaceBlank(String json) {
         String str = StaxonUtils.json2xml(json);
@@ -153,11 +153,12 @@ public class StaxonUtils {
         System.out.println("JSON:" + jsonString);
         System.out.println("------------------------------------------------");
         String xml = StaxonUtils.jsonConvertXml(jsonString);
-        System.out.println("JSON转XML去头前后添加<xml> \n" +xml);
+        System.out.println("JSON转XML去头前后添加<xml> \n" + xml);
         System.out.println("------------------------------------------------");
-        System.out.println("JSON转XML携带头文件 \n" +StaxonUtils.json2xml(jsonString));
+        System.out.println("JSON转XML携带头文件 \n" + StaxonUtils.json2xml(jsonString));
         System.out.println("------------------------------------------------");
         System.out.println("XML转JSON \n" + StaxonUtils.xmlConvertJson(xml));
+        System.out.println("------------------------------------------------");
+        System.out.println("JSON转XML去掉前后空格 \n" + StaxonUtils.json2xmlReplaceBlank(jsonString));
     }
-
 }
