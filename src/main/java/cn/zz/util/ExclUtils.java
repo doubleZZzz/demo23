@@ -55,7 +55,6 @@ public class ExclUtils {
                         }
                         innerList.add(cellinfo);
                         System.out.print(" " + cellinfo + " ");
-
                     }
                     outerList.add(i, innerList);
                     System.out.println();
