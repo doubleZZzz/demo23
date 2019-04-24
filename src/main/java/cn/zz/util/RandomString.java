@@ -52,8 +52,10 @@ public class RandomString {
     }
 
     public static void main(String[] ages) {
-        String random = getRandom(10);
+        String random = getRandom(3);
+        String timeSequence = getTimeSequence();
         System.out.println("获取定长随机数 : " + random + " 随机数长度 : " + random.length());
-        System.out.println("获取时间戳随机数 : "+getTimeSequence()+" 长度 : "+getTimeSequence().length());
+        System.out.println("获取时间戳随机数 : "+timeSequence+" 长度 : "+timeSequence.length());
+        System.out.println(timeSequence+random);
     }
 }
