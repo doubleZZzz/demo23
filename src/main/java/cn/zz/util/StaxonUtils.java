@@ -1,6 +1,7 @@
 package cn.zz.util;
 
 
+import cn.zz.domain.User;
 import com.alibaba.fastjson.JSONObject;
 import de.odysseus.staxon.json.JsonXMLConfig;
 import de.odysseus.staxon.json.JsonXMLConfigBuilder;
@@ -28,7 +29,7 @@ import java.util.regex.Pattern;
 public class StaxonUtils {
 
     /**
-     * json字符串转为xml字符串
+     * json字符串转为xml字符串(去头去尾,前后补充<xml></xml>
      *
      * @param json
      * @return
@@ -143,8 +144,13 @@ public class StaxonUtils {
     public static void main(String[] args) {
         JSONObject json = new JSONObject();
         Map<String, Object> map = new HashMap<String, Object>();
+        User user = new User();
+        user.setName("zhangsan");
+        user.setAge(18);
+
         map.put("aa", "123");
         map.put("vv", "456");
+        json.put("user",user);
         json.put("name", "jack");
         json.put("age", 25);
         json.put("test", map);
@@ -159,6 +165,6 @@ public class StaxonUtils {
 
         System.out.println("---------------------------------------------------------------");
         System.out.println("普通转XML带格式：\n" + StaxonUtils.json2xml(json.toJSONString()));
-    }
 
+    }
 }
