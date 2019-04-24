@@ -1,11 +1,14 @@
 package cn.zz.domain;
 
+import cn.zz.domain.base.BaseClass;
+
 /**
  * @Auther: ZhangZhuo
  * @Date: 2019/4/24 16:10
  * @Description:
  */
-public class User {
+public class User extends BaseClass {
+
     /**
      * 姓名
      */
