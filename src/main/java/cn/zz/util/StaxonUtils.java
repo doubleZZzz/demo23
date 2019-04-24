@@ -24,12 +24,12 @@ import java.util.regex.Pattern;
 /**
  * @Auther: ZhangZhuo
  * @Date: 2019/4/24 08:59
- * @Description:    JSON与XML互转
+ * @Description: JSON与XML互转
  */
 public class StaxonUtils {
 
     /**
-     * json字符串转为xml字符串(去头去尾,前后补充<xml></xml>
+     * json字符串转为xml字符串(去头,前后补充<xml></xml>
      *
      * @param json
      * @return
@@ -138,33 +138,26 @@ public class StaxonUtils {
         return dest;
     }
 
-    /**
-     * @param args
-     */
+
     public static void main(String[] args) {
         JSONObject json = new JSONObject();
-        Map<String, Object> map = new HashMap<String, Object>();
+        Map<String, User> map = new HashMap<String, User>();
         User user = new User();
         user.setName("zhangsan");
-        user.setAge(18);
+        user.setAge(20);
 
-        map.put("aa", "123");
-        map.put("vv", "456");
-        json.put("user",user);
-        json.put("name", "jack");
-        json.put("age", 25);
-        json.put("test", map);
-        System.out.println("JSON-->XML:");
-        System.out.println("JSON:" + json.toJSONString());
-        System.out.println("---------------------------------------------------------------");
-        String jsonConvertXml = StaxonUtils.jsonConvertXml((json.toJSONString()));
-        System.out.println("转XML去掉头部、前后补充<XML>：\n" + jsonConvertXml);
-
-        System.out.println("---------------------------------------------------------------");
-        System.out.println("XML转JSON：\n" + StaxonUtils.xmlConvertJson((jsonConvertXml)));
-
-        System.out.println("---------------------------------------------------------------");
-        System.out.println("普通转XML带格式：\n" + StaxonUtils.json2xml(json.toJSONString()));
-
+        json.put("user", user);
+        json.put("name", "lisi");
+        json.put("age", 40);
+        String jsonString = json.toJSONString();
+        System.out.println("JSON:" + jsonString);
+        System.out.println("------------------------------------------------");
+        String xml = StaxonUtils.jsonConvertXml(jsonString);
+        System.out.println("JSON转XML去头前后添加<xml> \n" +xml);
+        System.out.println("------------------------------------------------");
+        System.out.println("JSON转XML携带头文件 \n" +StaxonUtils.json2xml(jsonString));
+        System.out.println("------------------------------------------------");
+        System.out.println("XML转JSON \n" + StaxonUtils.xmlConvertJson(xml));
     }
+
 }
