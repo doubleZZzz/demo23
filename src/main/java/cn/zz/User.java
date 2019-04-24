@@ -7,5 +7,6 @@ package cn.zz;
  */
 public class User {
     private String name;
+    private String six;
     private Integer age;
 }
