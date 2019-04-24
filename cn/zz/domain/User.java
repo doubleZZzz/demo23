@@ -2,16 +2,17 @@ package cn.zz.domain;
 
 /**
  * @Auther: ZhangZhuo
- * @Date: 2019/4/24 16:10
+ * @Date: 2019/4/23 23:34
  * @Description:
  */
 public class User {
     /**
-     * 姓名
+     * 姓名.
      */
     private String name;
+
     /**
-     * 年龄
+     * 年龄.
      */
     private Integer age;
 
