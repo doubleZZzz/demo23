@@ -1,4 +1,4 @@
-package cn.zz;
+package cn.zz.util;
 
 
 import com.alibaba.fastjson.JSONObject;
