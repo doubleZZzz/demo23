@@ -92,7 +92,7 @@
 
 
     <build>
-        <finalName>gbf-app</finalName>
+        <finalName>demo-23</finalName>
         <!-- 插件管理 -->
         <plugins>
             <plugin>
