@@ -9,5 +9,6 @@ import cn.zz.domain.User;
  */
 public interface UserMapper {
 
-    int insert(User user);
+    void insert(User user);
+
 }

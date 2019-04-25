@@ -9,5 +9,7 @@ import cn.zz.domain.User;
  */
 public interface IUserService {
 
-    int insert(User user);
+    void insert(User user);
+
+
 }

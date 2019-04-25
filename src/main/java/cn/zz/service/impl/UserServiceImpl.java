@@ -1,6 +1,7 @@
 package cn.zz.service.impl;
 
 import cn.zz.domain.User;
+import cn.zz.mapper.UserMapper;
 import cn.zz.service.IUserService;
 
 /**
@@ -10,8 +11,12 @@ import cn.zz.service.IUserService;
  */
 public class UserServiceImpl implements IUserService {
 
-    public int insert(User user) {
+    private UserMapper userMapper;
 
-        return 0;
+    public void insert(User user) {
+        User u = new User();
+        u.setAge(18);
+        u.setName("zhangsan");
+        userMapper.insert(u);
     }
 }
