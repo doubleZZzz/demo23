@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package cn.zz.domain;
 
@@ -10,23 +10,26 @@ package cn.zz.domain;
  */
 public class Student extends User {
 
-	/**
-	 * 身高
-	 */
-	private Long height;
+    /**
+     * 兴趣
+     */
+    private String hobbies;
 
-	/**
-	 * 获取: height
-	 */
-	public Long getHeight() {
-		return height;
-	}
+    /**
+     * 获取: hobbies.
+     *
+     * @return the value of hobbies
+     */
+    public String getHobbies() {
+        return hobbies;
+    }
 
-	/**
-	 * 设置 : height
-	 */
-	public void setHeight(Long height) {
-		this.height = height;
-	}
-
+    /**
+     * 设置: hobbies.
+     *
+     * @param hobbies hobbies
+     */
+    public void setHobbies(String hobbies) {
+        this.hobbies = hobbies;
+    }
 }
