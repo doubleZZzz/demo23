@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package cn.zz.domain;
 
@@ -10,15 +10,49 @@ package cn.zz.domain;
  */
 public class Student extends User {
 
-	/**
-	 * 身高
-	 */
-	private Long height;
+    /**
+     * 身高
+     */
+    private Long height;
 
     /**
      * 兴趣
      */
-	private String hobbies;
+    private String hobbies;
+
+    /**
+     * 班级
+     */
+    private String classNum;
+
+    /**
+     * 获取: classNum
+     */
+    public String getClassNum() {
+        return classNum;
+    }
+
+    /**
+     * 设置 : classNum
+     */
+    public void setClassNum(String classNum) {
+        this.classNum = classNum;
+    }
+
+    /**
+     * 获取: height
+     */
+    public Long getHeight() {
+        return height;
+    }
+
+    /**
+     * 设置 : height
+     */
+    public void setHeight(Long height) {
+        this.height = height;
+    }
+
     /**
      * 获取: hobbies.
      *
@@ -27,37 +61,13 @@ public class Student extends User {
     public String getHobbies() {
         return hobbies;
     }
-	/**
-	 * 班级
-	 */
-	private String classNum;
 
-	/**
-	 * 获取: classNum
-	 */
-	public String getClassNum() {
-		return classNum;
-	}
-
-	/**
-	 * 设置 : classNum
-	 */
-	public void setClassNum(String classNum) {
-		this.classNum = classNum;
-	}
-
-	/**
-	 * 获取: height
-	 */
-	public Long getHeight() {
-		return height;
-	}
-
-	/**
-	 * 设置 : height
-	 */
-	public void setHeight(Long height) {
-		this.height = height;
-	}
-
+    /**
+     * 设置: hobbies.
+     *
+     * @param hobbies hobbies
+     */
+    public void setHobbies(String hobbies) {
+        this.hobbies = hobbies;
+    }
 }
