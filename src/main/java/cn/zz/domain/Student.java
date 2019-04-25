@@ -16,6 +16,25 @@ public class Student extends User {
 	private Long height;
 
 	/**
+	 * 班级
+	 */
+	private String classNum;
+
+	/**
+	 * 获取: classNum
+	 */
+	public String getClassNum() {
+		return classNum;
+	}
+
+	/**
+	 * 设置 : classNum
+	 */
+	public void setClassNum(String classNum) {
+		this.classNum = classNum;
+	}
+
+	/**
 	 * 获取: height
 	 */
 	public Long getHeight() {
