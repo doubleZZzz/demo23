@@ -6,7 +6,11 @@
 
     <groupId>demo-23</groupId>
     <artifactId>demo-23</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>demo-shop</module>
+    </modules>
 
     <dependencies>
         <dependency>
