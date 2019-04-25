@@ -16,6 +16,10 @@ public class Student extends User {
 	private Long height;
 
     /**
+     * 兴趣
+     */
+	private String hobbies;
+    /**
      * 获取: hobbies.
      *
      * @return the value of hobbies
